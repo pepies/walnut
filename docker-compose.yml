@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  walnut-node:
+    image: "node:16-alpine"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=${NODE_ENV}
+    volumes:
+      - ./:/home/node/app
+    expose:
+      - "8081"
+    # command: "npm start"
+    command: tail -f /dev/null

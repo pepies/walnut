@@ -1,0 +1,3 @@
+location ~ ^/(media/cache/attachment/resize|attachment)/ {
+  rewrite ^(.*)$ /{{ getenv "APP_INDEX" }}$1 last;
+}
