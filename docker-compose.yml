@@ -10,6 +10,5 @@ services:
     volumes:
       - ./:/home/node/app
     expose:
-      - "8081"
-    # command: "npm start"
-    command: tail -f /dev/null
+      - "3000"
+    command: "npm start"

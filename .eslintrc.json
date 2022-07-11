@@ -8,8 +8,7 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:storybook/recommended"
+    "plugin:@typescript-eslint/recommended"
   ],
   "plugins": [
     "react",
@@ -37,6 +36,7 @@
   "rules": {
     "react/prop-types": 0,
     "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "indent": [
       "error",
@@ -82,6 +82,7 @@
     "react/no-did-mount-set-state": 2,
     "react/no-multi-comp": 0,
     "react/jsx-boolean-value": 0,
-    "react/display-name": "off"
+    "react/display-name": "off",
+    "react/react-in-jsx-scope": "off"
   }
 }
