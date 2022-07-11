@@ -1,8 +1,9 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
+import { backendApi, locationsApi } from './api';
 
 export const store = configureStore({
   reducer: {
-    // counter: counterReducer,
+    [backendApi.reducerPath]: locationsApi.reducer,
   },
 });
 

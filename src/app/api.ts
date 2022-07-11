@@ -25,26 +25,6 @@ export const locationsApi = backendApi.injectEndpoints({
       query: ({term, type}) => `/locations?term=${term}&location_types=${type}`,
       providesTags: [apiTag.location],
     }),
-    // deleteInternalTag: builder.mutation<
-    //   CommandResponse<InternalTag>,
-    //   {id: TagId, project_id: ProjectId}
-    //   >({
-    //     query({id, project_id}) {
-    //       return {
-    //         url: '/command/run',
-    //         method: 'POST',
-    //         body: {
-    //           command: 'Delete:InternalTag',
-    //           parameters:
-    //           {
-    //             project_id,
-    //             id
-    //           }
-    //         },
-    //       };
-    //     },
-    //     invalidatesTags: [apiTag.internalTag],
-    //   })
   }),
 });
 
